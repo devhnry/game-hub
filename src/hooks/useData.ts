@@ -19,8 +19,6 @@ export default function useData<T>(
   useEffect(
     () => {
       const controller = new AbortController();
-      console.log("Effect is running");
-
       setLoading(true);
       apiClient
         .get<FetchResponse<T>>(endpoint, {
